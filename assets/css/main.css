@@ -3002,9 +3002,9 @@
 		width: 5em;
 		padding: 0.5em 1.25em;
 		text-transform: uppercase;
-		width: intrinsic;
 		width: -moz-max-content;
         width: -webkit-max-content;
+        width: intrinsic;
         padding: 40px;
 	}
 
