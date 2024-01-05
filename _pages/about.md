@@ -2,25 +2,97 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <i>Machine Learning Researcher, Data Scientist, and Software Engineer</i>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Olympic_2023.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a full-time ML researcher at Rutgers University and an experienced Data Scientist
+and Software Engineer. I have 2.5 years of industry experience
+working at two of the [top startups](https://www.ycombinator.com/topcompanies)
+([Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/)), and research experience 
+applying and improving Machine Learning models in the domains of Natural Language Processing, 
+Drug Discovery, and Computational Genomics.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I finished my master's in Computer Science from Rutgers University with a Machine Learning
+concentration in May 2023 and my bachelor's in Computer Science from Birla Institute of Technology 
+and Science (BITS), Pilani in May 2019.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I love working on challenging computational projects. I'm currently interested in finding
+opportunities for applying Machine Learning for solving scientific problems, especially at 
+the intersection of Biology, Chemistry, and Medicine.
+
+In my industry roles, I have worked in Data Science and engineering teams in fintech and e-commerce 
+companies. I have worked on problems like fraud detection, last-mile delivery, underwriting and risk, 
+and recommender systems. My work has involved development of the full end-to-end ML pipeline 
+including data collection, model development, deployment, monitoring, backend development, and 
+maintenance. 
+
+Outside of work, I love traveling and exploring places (especially New York City, 
+where I currently live). I also enjoy reading books, playing the guitar, and playing video games.
+
+<br>
+
+## Resume
+
+[Download my resume here](/assets/pdf/Vedang_Waradpande_PhD_CV.pdf)
+
+- Jun 2023 -- Present: Machine Learning Researcher -- FreundlichLab, New Jersey Medical School, Rutgers University
+- Sep 2021 -- May 2023: M.S. in Computer Science (Concentration: ML), Rutgers University
+  - Jan 2022 -- May 2022: Research Assistant -- Dept. of Genetics, ShahLab, Rutgers University 
+  - May 2022 -- Aug 2022: Data Science Intern -- Faire
+  - Nov 2022 -- May 2023: Research Assistant -- FreundlichLab, New Jersey Medical School, Rutgers University 
+- Jun 2019 -- Aug 2021: Data Scientist and Software Engineer -- Razorpay
+- Aug 2015 -- May 2019: B.E. (Hons.) in Computer Science, BITS Pilani
+  - Jul 2018 -- Dec 2018: Research Assistant -- Bioinformatics Research Center, Nanyang Technological University
+
+<br>
+
+## Writing
+
+I have 2 papers under preparation, and will soon provide links to preprints here.
+
+**Publications**
+1. "Predicting Completeness of Unstructured Shipping Addresses Using Ensemble Models" (2021). Vedang A. Waradpande, Petchetti Vinay Surya Prakash, Nikhil Jhaveri, and Shashank Agarwal. In Proceedings of ACM SIGIR Workshop on eCommerce (SIGIR 2021 eCom). [[PDF](https://sigir-ecom.github.io/ecom21Papers/paper25.pdf)]
+2. "Applications of Deep Graph Matrix Completion Models in Bioinformatics" (2018) [Undergraduate thesis] [[PDF](/assets/pdf/ug_thesis.pdf)]
+
+**Posters**
+1. Graph Convolutional Neural Networks (2019) [[PDF](/assets/pdf/gcn_poster.pdf)]
+
+**Blog posts**
+1. [Using Machine Learning to Detect E-Commerce Fraud: Introduction](/blog/index.html) (Apr 2020)
+2. [About k-Nearest Neighbors](/blog/knn.html) (Jul 2018)
+
+<br>
+
+## Selected Projects
+
+Following are some personal and academic projects I have pursued in the past couple of years related to Machine Learning, NLP, Computer Vision, and Software Engineering.
+
+1. **Visual Question Answering with Vision-Language Models** (2023) \
+  [[Code](https://github.com/VedangW/git-vqa)], [[Paper](/assets/pdf/git-vqa.pdf)] \
+  Adapts the [GIT model](https://arxiv.org/abs/2205.14100) by Microsoft for the Visual Question Answering task and evaluates it on the challenging [AOKVQA](https://allenai.org/project/a-okvqa/home) dataset by the Allen Institute for AI. The dataset is designed to test the model's ability to reason using diverse knowledge sources and commonsense.
+
+2. **Unsupervised Passage Retrieval for Fact-Checking and Entity Linking** (2022) \
+  [[Code](https://github.com/VedangW/upr-kilt)], [[Paper](/assets/pdf/upr-kilt.pdf)] \
+  Builds on the [Unsupervised Passage Retrieval](https://arxiv.org/pdf/2204.07496.pdf) method by extending its formulation for Fact-Checking and Entity Linking tasks as well as evaluating it's performance on the Question Answering datasets from the [KILT](https://ai.meta.com/tools/kilt/) benchmark by Meta.
+
+3. **IQ Tests on Pretrained Vision Transformers** (2022) \
+  [[Code](https://github.com/VedangW/abstract-visual-reasoning-vit)], [[Paper](/assets/pdf/abstract-visual-reasoning-vit.pdf)] \
+  Evaulates and improves the performance of the pretrained Vision Transformer and BEiT models on the Raven's Progressive Matrices IQ test using the [I-Raven](https://github.com/husheng12345/SRAN) dataset.
+
+4. **Gated Graph Neural Networks for Text Classification using PyTorch** (2022) \
+  [[Code](https://github.com/VedangW/TextING-PyTorch)], [[Paper](/assets/pdf/texting-pytorch.pdf)] \
+  Re-implementation of the [TextING model](https://arxiv.org/pdf/2004.13826.pdf) using PyTorch for ease of use. Converts text to graphs and builds a Gated Graph Neural Network model for text classification and evaluates it on four standard datasets, closely replicating the original results.
+
+<br>
+

@@ -124,7 +124,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: learnings # blog_name will be displayed in your blog page
-blog_description: A space where I write about personal learnings
+blog_description: Under construction, please check back later!
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -274,8 +274,8 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Waradpande]
+  first_name: [Vedang, A.]
 
   style: apa
   locale: en
