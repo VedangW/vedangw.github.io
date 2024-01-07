@@ -90,7 +90,7 @@ Following are some personal and academic projects I have pursued in the past cou
   [[Code](https://github.com/VedangW/abstract-visual-reasoning-vit)], [[Paper](/assets/pdf/abstract-visual-reasoning-vit.pdf)] \
   Evaulates and improves the performance of the pretrained Vision Transformer and BEiT models on the Raven's Progressive Matrices IQ test using the [I-Raven](https://github.com/husheng12345/SRAN) dataset.
 
-4. **Gated Graph Neural Networks for Text Classification using PyTorch** (2022) \
+4. **Gated Graph Neural Networks for Text Classification** (2022) \
   [[Code](https://github.com/VedangW/TextING-PyTorch)], [[Paper](/assets/pdf/texting-pytorch.pdf)] \
   Re-implementation of the [TextING model](https://arxiv.org/pdf/2004.13826.pdf) using PyTorch for ease of use. Converts text to graphs and builds a Gated Graph Neural Network model for text classification and evaluates it on four standard datasets, closely replicating the original results.
 
