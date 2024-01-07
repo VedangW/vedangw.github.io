@@ -63,14 +63,14 @@ I have 2 papers under preparation, and will soon provide links to preprints here
 
 **Publications**
 1. "Predicting Completeness of Unstructured Shipping Addresses Using Ensemble Models" (2021). Vedang A. Waradpande, Petchetti Vinay Surya Prakash, Nikhil Jhaveri, and Shashank Agarwal. In Proceedings of ACM SIGIR Workshop on eCommerce (SIGIR 2021 eCom). [[PDF](https://sigir-ecom.github.io/ecom21Papers/paper25.pdf)]
-2. "Applications of Deep Graph Matrix Completion Models in Bioinformatics" (2018) [Undergraduate thesis] [[PDF](/assets/pdf/ug_thesis.pdf)]
+2. "Applications of Deep Graph Matrix Completion Models in Bioinformatics" (2018) [Undergraduate thesis] [[PDF](https://drive.google.com/file/d/16So-v8LGF8JWHKvHDi8peVMke5VScSNg/view?usp=sharing)]
 
 **Posters**
-1. Graph Convolutional Neural Networks (2019) [[PDF](/assets/pdf/gcn_poster.pdf)]
+1. Graph Convolutional Neural Networks (2019) [[PDF](/assets/pdf/Graph_ConvNets_Poster.pdf)]
 
 **Blog posts**
-1. [Using Machine Learning to Detect E-Commerce Fraud: Introduction](/blog/index.html) (Apr 2020)
-2. [About k-Nearest Neighbors](/blog/knn.html) (Jul 2018)
+1. [Using Machine Learning to Detect E-Commerce Fraud: Introduction](https://razorpay.com/blog/detect-fraud-using-ml-ai-thirdwatch) (Apr 2020)
+2. [About k-Nearest Neighbors](/blog/2018/og-about-knns) (Jul 2018)
 
 <br>
 
