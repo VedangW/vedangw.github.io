@@ -1,324 +1,127 @@
 ---
 layout: distill
-title: a distill-style blog post
-description: an example of a distill-style blog post and main elements
-tags: distill formatting
+title: About k-Nearest Neighbors
+description: A deep dive into the specifics of k-nearest neighbors.
+tags: data-mining, machine-learning, supervised-learning
 giscus_comments: true
-date: 2021-05-22
+date: 2018-07-07
 featured: false
-published: false
+published: true
 
 authors:
-  - name: Albert Einstein
-    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+  - name: Vedang Waradpande
+    url: "https://vedangw.github.io/"
     affiliations:
-      name: IAS, Princeton
-  - name: Boris Podolsky
-    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
-    affiliations:
-      name: IAS, Princeton
-  - name: Nathan Rosen
-    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
-    affiliations:
-      name: IAS, Princeton
+      name: Birla Institute of Technology and Science, Pilani
 
 bibliography: 2018-12-22-distill.bib
 
-# Optionally, you can add a table of contents to your post.
-# NOTES:
-#   - make sure that TOC names match the actual section names
-#     for hyperlinks within the post to work correctly.
-#   - we may want to automate TOC generation in the future using
-#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Equations
+  - name: Introduction
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Citations
-  - name: Footnotes
-  - name: Code Blocks
-  - name: Interactive Plots
-  - name: Layouts
-  - name: Other Typography?
-
-# Below is an example of injecting additional post-specific styles.
-# If you use this post as a template, delete this _styles block.
-_styles: >
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }
+  - name: Algorithm
+  - name: Choices
+    subsections:
+      - name: Distance Metric
+      - name: Value of k
+      - name: Vote Aggregation
+  - name: Pros and Cons
 
 ---
 
-## Equations
+## Introduction
 
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
-You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
-If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
+While several complex algorithms have been developed for the purpose of solving classification and regression tasks in Machine Learning, there are cases in which simple algorithms work well and give satisfactory results with low (or no) training time. One such algorithm is the k-Nearest Neighbours algorithm. The idea of a k-NN is simple: "If it walks like a duck, quacks like a duck, then it is a duck."
 
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
-Here is an example:
+Wikipedia gives a great definition for the k-Nearest Neighbours algorithm:
+> "The k-nearest neighbors algorithm (k-NN) is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space."
+
+Desigining an effective k-NN classifier or regressor involves making a few choices according to the nature of the data. This article explores these choices and their effects on the algorithm's performance.
+
+***
+
+## Algorithm
+
+k-Nearest Neighbours is a lazy evaluation algorithm, which means it doesn't have a training phase. It simply stores the training data and uses it to classify new instances. The inference phase is as follows.
+
+The training data $$\mathbf{X}$$ is stored as a set of instances with input features $$X_1, ..., X_n$$ and corresponding labels $$Y$$. The label can be continuous (for regression) or discrete (for classification). A new sample $$X^* = (x_1, ..., x_n)$$ is represented using the same set of features and the goal is to predict $$y^*$$, the label.
+
+Steps:
+
+1. Calculate the pairwise distances $$d(X^i, X^*) \forall X^i \in \mathbf{X}$$ using a distance metric $$d$$.
+2. Choose labels $$y^i$$ for the $$k$$ nearest neighbours of $$X^*$$.
+3. The label is predicted as the mean of the labels of the $$k$$ nearest neighbours for continuous labels and as the mode for discrete labels.
+
+***
+
+## Choices
+
+The process is quite straightforward, and in this section, we'll go through the choices to make.
+
+### Distance Metric
+
+To know which k instances are closest to the test instance, we'll need a distance metric $d$ to measure how different two instances are. There are several distance metrics which can be used depending upon the nature of the data and problem at hand.
+
+- **Euclidean Distance**: The most commonly used distance metric. The Euclidean Distance between two points, $$A(a_1, a_2,..., a_n)$$ and $$B(b_1, b_2,..., b_n)$$ is given as 
 
 $$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+d(A, B) = \sqrt{\sum _{i=1}^{n}(a_i - b_i)^2}
 $$
 
-Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
+- **Manhattan Distance**: We can also use the Manhattan distance (also known as City Block distance). There are some claims that this metric works better for high dimensional data, as in [this paper](https://bib.dbvis.de/uploadedFiles/155.pdf). This distance is given by 
+
+$$
+d(A, B)=\sum _{i=1}^{n}\left|a_i - b_i\right|
+$$
+
+- **Hamming Distance**: In the case when $$X_1,...,X_n$$ are binary variables, the Hamming distance can be used. This is given by 
+
+$$
+\begin{align*}
+  d(A, B) &= \sum_{i=1}^{n}I_i \text{, where} \\
+  I_i &= \begin{cases} 
+    1\text{, } a_i = b_i \\ 
+    0\text{, otherwise}
+  \end{cases}
+\end{align*}
+$$
+
+### Value of k
+
+This is the most important factor to consider and the only hyperparameter of the algorithm. How many nearest samples should we choose to make sure that a new instance gets classified correctly? Intuitively we can tell that the number shouldn't be too less or too many. Let's try to get an idea what happens when we choose different values for $k$.
+
+1. **$$k$$ is too small**: Highly variable, unstable boundaries, sensitive to noise points and overfitting. Lets take $$k = 1$$ for a binary classification task (a 1-NN). This model will predict $$Y = 0$$ if the nearest neighbour to the test instance is negative and $$Y = 1$$ if it is positive. The "voting" fails because there aren't enough "voters".
+2. **$$k$$ is too large**: Neighborhood may contain more instances from other classes, and thus the test instance can be easily misclassified. In case of a class imbalance and a large value of $k$, the predictions will tend to favour the majority class.
+3. **$$k$$ is infinite**: This means that the k-NN always predicts the dominant class in the dataset. This is the same as a Zero-R rule-based classifier.
+
+
+In most cases, there's no exactly right value of $k$ for a given dataset. One of the best ways to select $$k$$ is to hold out a set of points from the training set as a validation set and choosing the value which maximizes performance.
+
+### Vote Aggregation
+
+There are several ways to aggregate the votes (labels) of the $k$ nearest neighbours. The mode and mean are generally default options for discrete and continuous settings respectively. However, the votes can be weighted using several methods. Some examples are:
+
+1. The weight is inversely proportional to the distances ($$w_i = \frac{1}{d(X^*, X^i)}$$). This means that the closer neighbours have a higher weight in the voting process. The weight can also be raised to an integer power to emphasize the effect of the distances.
+2. In case there are timestamps associated with data points, weights can be assigned based on the recency of the data point. This is useful in cases where the data is non-stationary and the model needs to adapt to the changes in the data distribution.
+3. In case of class imbalance, the weights can be assigned inversely proportional to the class frequencies. Lower frequency classes should have a bigger say in the voting process in many cases.
 
 ***
 
-## Citations
+## Pros and Cons
 
-Citations are then used in the article body with the `<d-cite>` tag.
-The key attribute is a reference to the id provided in the bibliography.
-The key attribute can take multiple ids, separated by commas.
+The k-NN algorithm is a simple algorithm and can ideally be used as a baseline in research problems and for some simple software solutions. It's clearly not expressive enough to capture any complexity in real-world data, but following are some cases where it might be useful:
 
-The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
-If you have an appendix, a bibliography is automatically created and populated in it.
+1. k-NN has a low setup times in terms of development and pairwise distances can be calculated fairly quickly by indexing the training data.
+2. It's a lazy evaluation algorithm, so there's no training phase. This means that the model can be updated in real-time as new data comes in.
+3. It's a non-parametric algorithm, which means there are no assumptions about the data distribution and the algorithm can be used universally to all kinds of data.
+2. While rare in real-world data, the task can sometimes be simple and/or the data can already be neatly clustered using a preprocessing pipeline in higher dimensions. k-NN works very well in such cases.
 
-Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
-However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
+It's also important to note the disadvantages of the algorithm:
 
-***
-
-## Footnotes
-
-Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
-
-***
-
-## Code Blocks
-
-Syntax highlighting is provided within `<d-code>` tags.
-An example of inline code snippets: `<d-code language="html">let x = 10;</d-code>`.
-For larger blocks of code, add a `block` attribute:
-
-<d-code block language="javascript">
-  var x = 25;
-  function(x) {
-    return x * x;
-  }
-</d-code>
-
-**Note:** `<d-code>` blocks do not look good in the dark mode.
-You can always use the default code-highlight using the `highlight` liquid tag:
-
-{% highlight javascript %}
-var x = 25;
-function(x) {
-  return x * x;
-}
-{% endhighlight %}
-
-***
-
-## Interactive Plots
-
-You can add interative plots using plotly + iframes :framed_picture:
-
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/demo.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
-</div>
-
-The plot must be generated separately and saved into an HTML file.
-To generate the plot that you see above, you can use the following code snippet:
-
-{% highlight python %}
-import pandas as pd
-import plotly.express as px
-df = pd.read_csv(
-  'https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv'
-)
-fig = px.density_mapbox(
-  df,
-  lat='Latitude',
-  lon='Longitude',
-  z='Magnitude',
-  radius=10,
-  center=dict(lat=0, lon=180),
-  zoom=0,
-  mapbox_style="stamen-terrain",
-)
-fig.show()
-fig.write_html('assets/plotly/demo.html')
-{% endhighlight %}
-
-***
-
-## Details boxes
-
-Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
-
-{% details Click here to know more %}
-Additional details, where math $$ 2x - 1 $$ and `code` is rendered correctly.
-{% enddetails %}
-
-***
-
-## Layouts
-
-The main text column is referred to as the body.
-It is the assumed layout of any direct descendants of the `d-article` element.
-
-<div class="fake-img l-body">
-  <p>.l-body</p>
-</div>
-
-For images you want to display a little larger, try `.l-page`:
-
-<div class="fake-img l-page">
-  <p>.l-page</p>
-</div>
-
-All of these have an outset variant if you want to poke out from the body text a little bit.
-For instance:
-
-<div class="fake-img l-body-outset">
-  <p>.l-body-outset</p>
-</div>
-
-<div class="fake-img l-page-outset">
-  <p>.l-page-outset</p>
-</div>
-
-Occasionally you’ll want to use the full browser width.
-For this, use `.l-screen`.
-You can also inset the element a little from the edge of the browser by using the inset variant.
-
-<div class="fake-img l-screen">
-  <p>.l-screen</p>
-</div>
-<div class="fake-img l-screen-inset">
-  <p>.l-screen-inset</p>
-</div>
-
-The final layout is for marginalia, asides, and footnotes.
-It does not interrupt the normal flow of `.l-body` sized text except on mobile screen sizes.
-
-<div class="fake-img l-gutter">
-  <p>.l-gutter</p>
-</div>
-
-***
-
-## Other Typography?
-
-Emphasis, aka italics, with *asterisks* (`*asterisks*`) or _underscores_ (`_underscores_`).
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list.
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
-
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+1. The algorithm doesn't work in low data settings, and it might take a long time to gather enough data to make accurate predictions.
+2. The algorithm is sensitive to noise and outliers. This can be mitigated to a certain extent by using a weighted voting scheme.
+3. It can't capture non-linear relationships in the data.
+4. However the distances are calculated, the algorithm is not scalable since it needs to calculate the pairwise distances between all the training instances and the test instance for each new instance and this can be computationally expensive.
