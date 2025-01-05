@@ -16,29 +16,21 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a full-time ML researcher at Rutgers University and an experienced Data Scientist
-and Software Engineer. I have 2.5 years of industry experience
-working at two of the [top startups](https://www.ycombinator.com/topcompanies)
+I am a Machine Learning Engineer at TikTok, working on the creator monetization integrity team. 
+I have 2.5 years of industry experience working in Data Science and engineering teams at two of the 
+[top startups](https://www.ycombinator.com/topcompanies)
 ([Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/)), and research experience 
 applying and improving Machine Learning models in the domains of Natural Language Processing, 
 Drug Discovery, and Computational Genomics.
 
 I finished my master's in Computer Science from Rutgers University with a Machine Learning
 concentration in May 2023 and my bachelor's in Computer Science from Birla Institute of Technology 
-and Science (BITS), Pilani in May 2019.
+and Science (BITS), Pilani (Goa campus) in May 2019.
 
-I love working on challenging computational projects. I'm currently interested in finding
-opportunities for applying Machine Learning for solving scientific problems, especially at 
-the intersection of Biology, Chemistry, and Medicine.
-
-In my industry roles, I have worked in Data Science and engineering teams in fintech and e-commerce 
-companies. I have worked on problems like fraud detection, last-mile delivery, underwriting and risk, 
-and recommender systems. My work has involved development of the full end-to-end ML pipeline 
-including data collection, model development, deployment, monitoring, backend development, and 
-maintenance. 
-
-Outside of work, I love traveling and exploring places (especially New York City, 
-where I currently live). I also enjoy reading books, playing the guitar, and playing video games.
+In my industry roles, I have worked in Data Science and engineering teams in social media, fintech, 
+and e-commerce companies. I have worked on challenging industry problems like creator spam detection, fraud detection, last-mile delivery, underwriting, and recommender systems. My work has involved development of the full 
+end-to-end ML pipeline including data curation, feature engineering, model development, deployment, monitoring, 
+backend development, and maintenance.
 
 <br>
 
