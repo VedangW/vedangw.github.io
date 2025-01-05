@@ -36,7 +36,7 @@ backend development, and maintenance.
 
 ## Resume
 
-[Download my resume here](/assets/pdf/Vedang_Waradpande_PhD_CV.pdf)
+[Download my resume here](/assets/pdf/Vedang_Resume_Dec_2024.pdf)
 
 - Jun 2023 -- Present: Machine Learning Researcher -- FreundlichLab, New Jersey Medical School, Rutgers University
 - Sep 2021 -- May 2023: M.S. in Computer Science (Concentration: ML), Rutgers University
