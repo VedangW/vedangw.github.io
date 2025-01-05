@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <i>Machine Learning Researcher, Data Scientist, and Software Engineer</i>
+subtitle: <i>Machine Learning Engineer, Data Scientist, ML Researcher</i>
 
 profile:
   align: right
@@ -16,7 +16,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Machine Learning Engineer at TikTok, working on the creator monetization integrity team. 
+I am a Machine Learning Engineer II at TikTok, working on the creator monetization integrity team. 
 I have 2.5 years of industry experience working in Data Science and engineering teams at two of the 
 [top startups](https://www.ycombinator.com/topcompanies)
 ([Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/)), and research experience 
