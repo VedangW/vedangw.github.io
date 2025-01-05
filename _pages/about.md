@@ -38,7 +38,8 @@ backend development, and maintenance.
 
 [Download my resume here](/assets/pdf/Vedang_Resume_Dec_2024.pdf)
 
-- Jun 2023 -- Present: Machine Learning Researcher -- FreundlichLab, New Jersey Medical School, Rutgers University
+- Aug 2024 -- Present: Machine Learning Engineer II -- TikTok
+- Jun 2023 -- Aug 2024: Machine Learning Researcher -- FreundlichLab, New Jersey Medical School, Rutgers University
 - Sep 2021 -- May 2023: M.S. in Computer Science (Concentration: ML), Rutgers University
   - Jan 2022 -- May 2022: Research Assistant -- Dept. of Genetics, ShahLab, Rutgers University 
   - May 2022 -- Aug 2022: Data Science Intern -- Faire
