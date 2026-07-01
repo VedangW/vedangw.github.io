@@ -14,7 +14,6 @@ authors:
     affiliations:
       name: Birla Institute of Technology and Science, Pilani
 
-bibliography: 2018-12-22-distill.bib
 
 toc:
   - name: Introduction
