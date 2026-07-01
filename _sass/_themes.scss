@@ -1,0 +1,13 @@
+// Light theme color overrides — shadow al_folio_core gem defaults.
+:root {
+  --global-theme-color: #b509ac;
+  --global-hover-color: #b509ac;
+  --global-hover-text-color: #fff;
+}
+
+// Dark theme color overrides.
+html[data-theme="dark"] {
+  --global-theme-color: #c962c4;
+  --global-hover-color: #c962c4;
+  --global-hover-text-color: #fff;
+}
