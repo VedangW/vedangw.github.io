@@ -16,7 +16,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Machine Learning Engineer II at TikTok, working on the creator monetization integrity team. 
+I am a Senior Machine Learning Engineer at PayPal, and previously a MLE II at TikTok, working on the creator monetization integrity team. 
 I have 2.5 years of industry experience working in Data Science and engineering teams at two of the 
 [top startups](https://www.ycombinator.com/topcompanies)
 ([Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/)), and research experience 
