@@ -11,3 +11,14 @@ html[data-theme="dark"] {
   --global-hover-color: #c962c4;
   --global-hover-text-color: #fff;
 }
+
+// Font family override via CSS rules (avoids Dart Sass @use module conflicts).
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Mono", monospace;
+}
