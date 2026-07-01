@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+// Body and heading font (loaded via third_party_libraries.google_fonts in _config.yml)
+$font-family-sans-serif: "IBM Plex Mono", monospace !default;
+
+// Serif font used for headings / distill posts
+$font-family-serif: "IBM Plex Mono", monospace !default;
+
+// Monospace font used for code blocks
+$font-family-monospace: "IBM Plex Mono", monospace !default;
+
+// Base font size
+$font-size-base: 1rem !default; // 16px
+
+// Font weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+// Line height
+$line-height-base: 1.5 !default;
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+
+$spacer: 1rem !default;
