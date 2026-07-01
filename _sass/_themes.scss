@@ -209,7 +209,7 @@ html[data-theme-setting="light"] {
   color: var(--global-theme-color);
 }
 
-// Font family overrides via CSS rules (avoids Dart Sass @use module conflicts).
+// Font family and weight overrides via CSS rules (avoids Dart Sass @use module conflicts).
 body,
 h1,
 h2,
@@ -218,6 +218,7 @@ h4,
 h5,
 h6 {
   font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
 }
 
 code,
@@ -225,4 +226,5 @@ pre,
 kbd,
 samp {
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
 }
