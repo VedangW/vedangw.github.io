@@ -36,7 +36,7 @@ backend development, and maintenance.
 
 ## Resume
 
-[Download my resume here](/assets/pdf/Vedang_Resume_Dec_2024.pdf)
+[Download my resume here](/assets/pdf/Vedang_Resume_May_2026.pdf)
 
 - Aug 2024 -- Present: Machine Learning Engineer II -- TikTok
 - Jun 2023 -- Aug 2024: Machine Learning Researcher -- FreundlichLab, New Jersey Medical School, Rutgers University
