@@ -16,11 +16,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a Senior Machine Learning Engineer at PayPal, working on graph intelligence, search, and personalization. Prior to this, I worked as a Machine Learning Engineer II at TikTok on the integrity team. I have also worked in Data Science teams at [Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/), two of the [top Y-combinator startups](https://www.ycombinator.com/companies?top_company=true). As an MLE generalist, my core areas of interest and experience are search, recommender systems, monetization, and integrity/risk/trust and safety. I work across the end-to-end ML stack including ML modeling, production ML systems, large-scale data pipelines and engineering, infrastructure, and adjacent software to enable projects at scale. My projects have addressed core business problems in social media, e-commerce, and finance.
+I'm a Senior Machine Learning Engineer at PayPal, working on graph intelligence, search, and personalization. Prior to this, I worked as a Machine Learning Engineer II at TikTok on the integrity team, and before that in Data Science roles at [Faire](https://www.faire.com/) and [Razorpay](https://razorpay.com/), two well-known Y-Combinator-backed startups. My core areas of interest and experience are search, recommender systems, monetization, and integrity/risk/trust and safety. I work across the full ML stack — modeling, production systems, and the data infrastructure that supports them — on projects spanning social media, e-commerce, and finance.
 
-I have spent many years working on ML research both full- and part-time. My core area of interest is computational drug discovery (molecular property prediction and docking when viewed through the ML lens) and I'm advised by [Prof. Joel Freundlich](https://njms.rutgers.edu/departments/labs/freundlich/) and previously by [Prof. Kwoh Chee Keong](https://personal.ntu.edu.sg/asckkwoh/). This field actively excites me considering the massive impact new discoveries can have on humanity and the deep, unsolved ML challenges it brings. I have also worked on research projects in computational genomics (with [Dr. Premal Shah](https://theshahlab.org/team/premal-shah/)), and natural language processing, and vision-language modeling (with [Dr. Karl Stratos](https://karlstratos.com)).
+Alongside my industry work, I've been active in ML research, both full- and part-time. My core interest is computational drug discovery — molecular property prediction and docking, viewed through an ML lens — an area I find compelling for both its unsolved ML challenges and its potential real-world impact, working with [Prof. Joel Freundlich](https://njms.rutgers.edu/departments/labs/freundlich/) and previously with [Prof. Kwoh Chee Keong](https://personal.ntu.edu.sg/asckkwoh/). I've also worked on research in computational genomics with [Dr. Premal Shah](https://theshahlab.org/team/premal-shah/), and in NLP and vision-language modeling with [Dr. Karl Stratos](https://karlstratos.com).
 
-I finished my master's in Computer Science from Rutgers University with a Machine Learning concentration in May 2023 and my bachelor's in Computer Science from Birla Institute of Technology and Science (BITS), Pilani (Goa campus) in May 2019.
+I finished my master's in Computer Science from Rutgers University with a Machine Learning concentration in May 2023, and my bachelor's in Computer Science from Birla Institute of Technology and Science (BITS), Pilani (Goa campus) in May 2019.
 
 <br>
 
@@ -34,14 +34,18 @@ I finished my master's in Computer Science from Rutgers University with a Machin
 
 I have 2 papers under preparation, and will soon provide links to preprints here.
 
-**Articles**
+#### Articles
+
 1. "Identification of Antituberculars with Favorable Potency and Pharmacokinetics through Structure-Based and Ligand-Based Modeling" (2025). Vedang Warapande, Fanwang Meng, Alexandra Bozan, David E Graff, Jenna C Fromer, Khadija Mughal, Faheem K Mohideen, Shivangi, Sindhuja Paruchuri, Melanie L Johnston, Pankaj Sharma, Timothy R Crea, Reshma S Rudraraju, Amir George, Camilla Folvar, Andrew M Nelson, Matthew B Neiditch, Matthew D Zimmerman, Connor W Coley, Joel S Freundlich. (bioRxiv). [[PDF](https://www.biorxiv.org/content/10.1101/2025.02.03.636334v1.full.pdf)]
 2. "Predicting Completeness of Unstructured Shipping Addresses Using Ensemble Models" (2021). Vedang A. Waradpande, Petchetti Vinay Surya Prakash, Nikhil Jhaveri, and Shashank Agarwal. In Proceedings of ACM SIGIR Workshop on eCommerce (SIGIR 2021 eCom). [[PDF](https://sigir-ecom.github.io/ecom21Papers/paper25.pdf)]
 
 **Undergraduate thesis**: "Applications of Deep Graph Matrix Completion Models in Bioinformatics" (2018) [Undergraduate thesis] [[PDF](https://drive.google.com/file/d/16So-v8LGF8JWHKvHDi8peVMke5VScSNg/view?usp=sharing)]
 
-**Posters**
+#### Posters
+
 1. Graph Convolutional Neural Networks (2019). Unpublished. [[PDF](/assets/pdf/Graph_ConvNets_Poster.pdf)]
+
+#### Blog
 
 [See my blog posts here.](/blog/)
 
